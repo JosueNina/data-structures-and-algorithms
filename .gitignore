@@ -1,0 +1,9 @@
+# Ignore compiled files
+*.exe
+*.out
+
+# Ignore other common files
+*.o
+*.obj
+*.class
+*.dll
