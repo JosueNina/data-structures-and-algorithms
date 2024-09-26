@@ -17,6 +17,18 @@ void _log(const vector<T>& v);
 //set
 template<typename T>
 void _log(const set<T>& t);
+//queue
+template<typename T>
+void _log(queue<T> q);
+//stack
+template<typename T>
+void _log(stack<T> s);
+//priority_queue (heap - max)
+template<typename T>
+void _log(priority_queue<T> p);
+//priority_queue (heap - min)
+template<typename T>
+void _log(priority_queue<T, vector<T>, greater<T>> p);
 
 
 //Simple value
@@ -60,6 +72,62 @@ void _log(const set<T>& t) {
     }
   }
   cout << "}";
+}
+
+//queue
+template<typename T>
+void _log(queue<T> q) {
+  cout << "<< ";
+  while (!q.empty()) {
+    _log(q.front());
+    q.pop();
+    if (!q.empty()) {
+      cout << " -> ";
+    }
+  }
+  cout << " >>";
+}
+
+//stack
+template<typename T>
+void _log(stack<T> s) {
+  cout << "<< ";
+  while (!s.empty()) {
+    _log(s.top());
+    s.pop();
+    if (!s.empty()) {
+      cout << " -> ";
+    }
+  }
+  cout << " >>";
+}
+
+//priority_queue (heap)
+template<typename T>
+void _log(priority_queue<T> p) {
+  cout << "<< ";
+  while (!p.empty()) {
+    _log(p.top());
+    p.pop();
+    if (!p.empty()) {
+      cout << " -> ";
+    }
+  }
+  cout << " >>";
+}
+
+//priority_queue (heap - min)
+template<typename T>
+void _log(priority_queue<T, vector<T>, greater<T>> p) {
+  cout << "<< ";
+  while (!p.empty()) {
+    _log(p.top());
+    p.pop();
+    if (!p.empty()) {
+      cout << " -> ";
+    }
+  }
+  cout << " >>";
 }
 
 template<typename T>
